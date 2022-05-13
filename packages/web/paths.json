@@ -1,0 +1,43 @@
+{
+    "compilerOptions": {
+        "baseUrl": "./src",
+        "paths": {
+            "@types": [
+                "src/types"
+            ],
+            "@components": [
+                "src/components"
+            ],
+            "@enums": [
+                "src/enums"
+            ],
+            "@containers": [
+                "src/containers"
+            ],
+            "@styles": [
+                "src/styles"
+            ],
+            "@mockdata": [
+                "src/mockdata"
+            ],
+            "@constant": [
+                "src/constant"
+            ],
+            "@hooks": [
+                "src/hooks"
+            ],
+            "@validationSchema": [
+                "src/validationSchema"
+            ],
+            "@assets": [
+                "src/assets"
+            ],
+            "@store": [
+                "src/store"
+            ],
+            "@api": [
+                "src/api"
+            ]
+        }
+    }
+}
