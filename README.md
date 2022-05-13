@@ -1,6 +1,14 @@
 ## Với những dự án front-end lớn, việc sử dụng nhiều project trong 1 dự án có thể được xem như 1 giải pháp để có thể tối ưu và mở rộng ( Trang Admin và trang User riêng ).
 ## Ví dụ trên sử dụng mono repo và lerna để minh họa cho việc đó, branch common và branch web được sử dụng để quản lý 2 project reactjs riêng, và có những setup cụ thể
-## Chuẩn bị:
+## Clone
+```
+git clone https://github.com/xulidinh88/lerna-monorepo.git
+yarn
+cd packages/web
+yarn start
+```
+or
+## Set up:
 - Install lerna
 ```
 npm install -g lerna
@@ -33,22 +41,22 @@ lerna init
   "useWorkspaces": true
 }
 ```
-- init `web` UI react app 
+- Khởi tạo `web` UI react app 
 ```
 npx create-react-app web --template typescript
 ```
-- init `common` react app
+- Khởi tạo `common` react app
 ```
 npx create-react-app common --template typescript
 ```
-- Create component foler share in `common`, and add `Button Component`
-- Change file `index.tsx` ở thư mục `common`
+- Tạo thư mục componnents dùng chung `common`, và thêm `Button Component`
+- Sửa file `index.tsx` ở thư mục `common`
 ```
 import Button from "./components/button";
 
 export { Button };
 ```
-- Change `package.json` trong `common` trở thành: 
+- Sửa `package.json` trong `common` trở thành: 
 ```
 "name": "common",
   "version": "0.1.0",
@@ -81,7 +89,7 @@ yarn add @craco/craco
     }
 }
 ```
-- Thêm thư mục `craco.config.js` vào thư mục `web`
+- Thêm file `craco.config.js` vào thư mục `web`
 ```
 const path = require("path");
 const { getLoader, loaderByName } = require("@craco/craco");
