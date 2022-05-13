@@ -4,6 +4,13 @@
 ```
 git clone https://github.com/xulidinh88/lerna-monorepo.git
 yarn
+
+cd packages/common
+yarn
+
+cd packages/web
+yarn
+
 cd packages/web
 yarn start
 ```
